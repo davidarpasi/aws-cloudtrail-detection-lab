@@ -1,0 +1,1439 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:user/lab-analyst-user",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIARZDBHTAT4PW7J4PP",
+        "userName": "lab-analyst-user"
+      },
+      "eventTime": "2026-05-06T23:29:57Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "GetCallerIdentity",
+      "awsRegion": "eu-north-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "aws-cli/1.44.68 md/Botocore#1.42.78 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.13.13 md/pyimpl#CPython m/Z,b,D,n cfg/retry-mode#legacy botocore/1.42.78",
+      "requestParameters": null,
+      "responseElements": null,
+      "additionalEventData": {
+        "ExtendedRequestId": "MTpldS1ub3J0aC0xOlM6MTc3ODExMDE5NzE3NzpSOnlsblM1UG5F",
+        "RequestDetails": {
+          "awsServingRegion": "eu-north-1",
+          "endpointType": "regional"
+        }
+      },
+      "requestID": "cd7cf41a-f31c-4285-a53d-3baa3bf03cc8",
+      "eventID": "482c05e3-7293-4c8e-99eb-9033248f767a",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "sts.eu-north-1.amazonaws.com"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:user/lab-analyst-user",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIARZDBHTAT4PW7J4PP",
+        "userName": "lab-analyst-user"
+      },
+      "eventTime": "2026-05-06T23:34:10Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "eu-north-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "aws-cli/1.44.68 md/Botocore#1.42.78 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.13.13 md/pyimpl#CPython m/Z,D,C,n,b cfg/retry-mode#legacy botocore/1.42.78",
+      "errorCode": "Client.UnauthorizedOperation",
+      "errorMessage": "You are not authorized to perform this operation. User: arn:aws:iam::122610489383:user/lab-analyst-user is not authorized to perform: ec2:DescribeInstances because no identity-based policy allows the ec2:DescribeInstances action",
+      "requestParameters": {
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "requestID": "6e6a9ec6-4c22-48be-a286-a75c3551e320",
+      "eventID": "30dbc315-f42b-428d-a645-9f9af03cfaaa",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "ec2.eu-north-1.amazonaws.com"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:user/lab-analyst-user",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIARZDBHTAT4PW7J4PP",
+        "userName": "lab-analyst-user"
+      },
+      "eventTime": "2026-05-06T23:45:02Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "eu-north-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "aws-cli/1.44.68 md/Botocore#1.42.78 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.13.13 md/pyimpl#CPython m/b,n,C,Z,D cfg/retry-mode#legacy botocore/1.42.78",
+      "requestParameters": {
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "requestID": "7c0df79e-60ae-4e91-9047-68a0dc1b2d23",
+      "eventID": "0b6fa219-11cf-46d5-9a67-bd19172e574d",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "ec2.eu-north-1.amazonaws.com"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:user/lab-analyst-user",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIARZDBHTAT4PW7J4PP",
+        "userName": "lab-analyst-user"
+      },
+      "eventTime": "2026-05-06T23:45:20Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeSecurityGroups",
+      "awsRegion": "eu-north-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "aws-cli/1.44.68 md/Botocore#1.42.78 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.13.13 md/pyimpl#CPython m/b,D,n,C,Z cfg/retry-mode#legacy botocore/1.42.78",
+      "requestParameters": {
+        "securityGroupSet": {},
+        "securityGroupIdSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "requestID": "647c5b91-5378-4b88-ac17-e2642746512d",
+      "eventID": "177056cd-5052-46a8-b946-4f70746a8e75",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "ec2.eu-north-1.amazonaws.com"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:user/lab-analyst-user",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIARZDBHTAT4PW7J4PP",
+        "userName": "lab-analyst-user"
+      },
+      "eventTime": "2026-05-06T23:45:42Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "GetCallerIdentity",
+      "awsRegion": "eu-north-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "aws-cli/1.44.68 md/Botocore#1.42.78 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.13.13 md/pyimpl#CPython m/Z,D,n,b cfg/retry-mode#legacy botocore/1.42.78",
+      "requestParameters": null,
+      "responseElements": null,
+      "additionalEventData": {
+        "ExtendedRequestId": "MTpldS1ub3J0aC0xOlM6MTc3ODExMTE0MjY3NzpSOllZNzdRNTBq",
+        "RequestDetails": {
+          "awsServingRegion": "eu-north-1",
+          "endpointType": "regional"
+        }
+      },
+      "requestID": "fbcb4e17-dae7-4cb7-b485-6377687622e0",
+      "eventID": "2de523ba-a61a-4da3-8f08-b0cc1f43e49e",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "sts.eu-north-1.amazonaws.com"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:user/lab-analyst-user",
+        "accountId": "123456789012",
+        "userName": "lab-analyst-user"
+      },
+      "eventTime": "2026-05-06T23:48:27Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "eu-north-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "LoginTo": "https://console.aws.amazon.com/console/home?ca-oauth-flow-id=a614&hashArgs=%23&isauthcode=true&oauthStart=1778111283052&state=hashArgsFromTB_eu-north-1_09c8562044c1f67c",
+        "MobileVersion": "No",
+        "MFAUsed": "No"
+      },
+      "eventID": "194a6baf-1c38-43f7-b91f-93a15122f692",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "eu-north-1.signin.aws.amazon.com"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATTL5O6HFD",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-05T22:35:05Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-05T22:58:38Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListRoles",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "maxItems": 1000
+      },
+      "responseElements": null,
+      "requestID": "0f850009-e15e-4da2-aeba-4aa35bdac615",
+      "eventID": "5c965d6d-c127-488d-b4a6-0b3be6e09517",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATTL5O6HFD",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-05T22:35:05Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-05T22:58:38Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "maxItems": 1000
+      },
+      "responseElements": null,
+      "requestID": "3e95bd70-973e-470a-a9fb-bc94b1a1914f",
+      "eventID": "f6780ab5-e010-4515-9d32-ed174fb0c67f",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATTL5O6HFD",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-05T22:35:05Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-05T22:59:24Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateUser",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "userName": "lab-analyst-user"
+      },
+      "responseElements": {
+        "user": {
+          "path": "/",
+          "userName": "lab-analyst-user",
+          "userId": "AIDARZDBHTAT6SMJUQ3C2",
+          "arn": "arn:aws:iam::122610489383:user/lab-analyst-user",
+          "createDate": "May 5, 2026, 10:59:24\u00e2\u20ac\u00afPM"
+        }
+      },
+      "requestID": "227a79d8-b6c1-4a65-b4c5-834a6404c740",
+      "eventID": "011ff275-ebba-4816-8984-0ac7148836ec",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATTL5O6HFD",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-05T22:35:05Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-05T22:59:24Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "maxItems": 1000
+      },
+      "responseElements": null,
+      "requestID": "c48990f1-3d04-422b-9de6-e30f92e99615",
+      "eventID": "650b5f0e-f0df-446f-8330-3b6aedcae2aa",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATWVYBCARF",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-05T22:35:05Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-05T23:34:12Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "userName": "lab-analyst-user"
+      },
+      "responseElements": {
+        "accessKey": {
+          "userName": "lab-analyst-user",
+          "accessKeyId": "AKIARZDBHTATUST7MABC",
+          "status": "Active",
+          "createDate": "May 5, 2026, 11:34:12\u00e2\u20ac\u00afPM"
+        }
+      },
+      "requestID": "affdbe5c-ee14-4b30-97f7-dff45d2945a8",
+      "eventID": "79197b22-253f-43f3-b85c-28927a5191a1",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATXABY4RYE",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-05T22:35:05Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-05T23:40:02Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "maxItems": 1000
+      },
+      "responseElements": null,
+      "requestID": "6e33aa3a-58a4-4267-a43d-b847aafade19",
+      "eventID": "1de3c344-a8e3-4815-a9c5-a34cc4d5f45d",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATXABY4RYE",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-05T22:35:05Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-05T23:40:51Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "userName": "lab-analyst-user"
+      },
+      "responseElements": {
+        "accessKey": {
+          "userName": "lab-analyst-user",
+          "accessKeyId": "AKIARZDBHTAT4PW7J4PP",
+          "status": "Active",
+          "createDate": "May 5, 2026, 11:40:51\u00e2\u20ac\u00afPM"
+        }
+      },
+      "requestID": "e3d61eaf-7c37-4bfc-b0a6-131778842286",
+      "eventID": "0ff9c097-fcad-40c7-af3a-68b7a0a353c4",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTAT4CPDVMFA",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-05T22:35:05Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-05T23:50:36Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "maxItems": 1000
+      },
+      "responseElements": null,
+      "requestID": "f6cd9467-977f-4a44-9604-b28035e5ccb1",
+      "eventID": "d6ca284d-fb49-4a31-bc27-15530999c111",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTAT4CPDVMFA",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-05T22:35:05Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-05T23:51:14Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "userName": "lab-analyst-user",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null,
+      "requestID": "2e7c45b2-cb5c-472d-af67-574c56460497",
+      "eventID": "ad60ffe0-4536-4db0-bfbf-5972016114ec",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATV5COGPFZ",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROARZDBHTAT3RXCSURQ3",
+            "arn": "arn:aws:iam::122610489383:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+            "accountId": "122610489383",
+            "userName": "AWSServiceRoleForResourceExplorer"
+          },
+          "attributes": {
+            "creationDate": "2026-05-06T01:34:10Z",
+            "mfaAuthenticated": "false"
+          }
+        },
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventTime": "2026-05-06T01:34:10Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeSecurityGroups",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "resource-explorer-2.amazonaws.com",
+      "requestParameters": {
+        "maxResults": 1000,
+        "securityGroupSet": {},
+        "securityGroupIdSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "requestID": "eed080ed-8d63-44c3-8eee-05b05c34a1c4",
+      "eventID": "4e23b273-5301-4b74-8e55-0af50fe509d1",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATVMH5ZGI5",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROARZDBHTAT3RXCSURQ3",
+            "arn": "arn:aws:iam::122610489383:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+            "accountId": "122610489383",
+            "userName": "AWSServiceRoleForResourceExplorer"
+          },
+          "attributes": {
+            "creationDate": "2026-05-06T01:42:34Z",
+            "mfaAuthenticated": "false"
+          }
+        },
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventTime": "2026-05-06T01:42:34Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "resource-explorer-2.amazonaws.com",
+      "requestParameters": {
+        "maxResults": 1000,
+        "instancesSet": {},
+        "filterSet": {
+          "items": [
+            {
+              "name": "instance-state-name",
+              "valueSet": {
+                "items": [
+                  {
+                    "value": "pending"
+                  },
+                  {
+                    "value": "running"
+                  },
+                  {
+                    "value": "stopping"
+                  },
+                  {
+                    "value": "stopped"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "responseElements": null,
+      "requestID": "6202e7db-1e21-4145-a7ac-c7937cd30032",
+      "eventID": "2824e371-d968-43d3-8372-15783c3f34ec",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTAT25LRWU3I",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROARZDBHTAT3RXCSURQ3",
+            "arn": "arn:aws:iam::122610489383:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+            "accountId": "122610489383",
+            "userName": "AWSServiceRoleForResourceExplorer"
+          },
+          "attributes": {
+            "creationDate": "2026-05-06T01:44:23Z",
+            "mfaAuthenticated": "false"
+          }
+        },
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventTime": "2026-05-06T01:44:23Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "resource-explorer-2.amazonaws.com",
+      "requestParameters": null,
+      "responseElements": null,
+      "requestID": "c01b862a-39e1-4590-80d3-c8eea4ea2ee4",
+      "eventID": "6b22a233-b0b9-4ae0-abfe-7aa523005f57",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATUGKEZLYS",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROARZDBHTAT3RXCSURQ3",
+            "arn": "arn:aws:iam::122610489383:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+            "accountId": "122610489383",
+            "userName": "AWSServiceRoleForResourceExplorer"
+          },
+          "attributes": {
+            "creationDate": "2026-05-06T02:22:01Z",
+            "mfaAuthenticated": "false"
+          }
+        },
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventTime": "2026-05-06T02:22:01Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListRoles",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "resource-explorer-2.amazonaws.com",
+      "requestParameters": null,
+      "responseElements": null,
+      "requestID": "3e32a9c9-6177-46ed-9be0-33ff37c976b8",
+      "eventID": "63c7e56e-056b-40ae-abb2-74b34cf5a1c2",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTAT3IVSZUEQ",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROARZDBHTAT3RXCSURQ3",
+            "arn": "arn:aws:iam::122610489383:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+            "accountId": "122610489383",
+            "userName": "AWSServiceRoleForResourceExplorer"
+          },
+          "attributes": {
+            "creationDate": "2026-05-06T17:48:34Z",
+            "mfaAuthenticated": "false"
+          }
+        },
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventTime": "2026-05-06T17:48:34Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "resource-explorer-2.amazonaws.com",
+      "requestParameters": {
+        "maxResults": 1000,
+        "instancesSet": {},
+        "filterSet": {
+          "items": [
+            {
+              "name": "instance-state-name",
+              "valueSet": {
+                "items": [
+                  {
+                    "value": "pending"
+                  },
+                  {
+                    "value": "running"
+                  },
+                  {
+                    "value": "stopping"
+                  },
+                  {
+                    "value": "stopped"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "responseElements": null,
+      "requestID": "b961629b-c409-4739-9968-80c196b23d42",
+      "eventID": "3b8436bf-68b3-4551-b4a4-54c9556faabc",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATTOMY6E2P",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROARZDBHTAT3RXCSURQ3",
+            "arn": "arn:aws:iam::122610489383:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+            "accountId": "122610489383",
+            "userName": "AWSServiceRoleForResourceExplorer"
+          },
+          "attributes": {
+            "creationDate": "2026-05-06T17:48:39Z",
+            "mfaAuthenticated": "false"
+          }
+        },
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventTime": "2026-05-06T17:48:39Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "resource-explorer-2.amazonaws.com",
+      "requestParameters": null,
+      "responseElements": null,
+      "requestID": "d4b69834-9ce5-4c45-bfae-024a5fd4c2e6",
+      "eventID": "7736c882-c808-4c4f-92be-a509ecce8af7",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATQ4ZX3ABH",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROARZDBHTAT3RXCSURQ3",
+            "arn": "arn:aws:iam::122610489383:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+            "accountId": "122610489383",
+            "userName": "AWSServiceRoleForResourceExplorer"
+          },
+          "attributes": {
+            "creationDate": "2026-05-06T22:14:26Z",
+            "mfaAuthenticated": "false"
+          }
+        },
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventTime": "2026-05-06T22:14:27Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListRoles",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "resource-explorer-2.amazonaws.com",
+      "requestParameters": null,
+      "responseElements": null,
+      "requestID": "8370bc7a-74f7-4b11-982e-fe005d5bdafb",
+      "eventID": "dbf3b5c7-3d71-47dd-bece-53ec3a2a5b20",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": ""
+      },
+      "eventTime": "2026-05-06T23:09:45Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "LoginTo": "https://us-east-1.console.aws.amazon.com/iam/home?ca-oauth-flow-id=9f0e&hashArgs=%23%2Fusers%2Fdetails%2Flab-analyst-user%3Fsection%3Dpermissions&isauthcode=true&oauthStart=1778066058300&region=us-east-1&state=hashArgsFromTB_us-east-1_4925a43c1ed96c5c",
+        "MobileVersion": "No",
+        "MFAIdentifier": "arn:aws:iam::122610489383:mfa/Exercise_AWS",
+        "MFAUsed": "Yes"
+      },
+      "eventID": "b8009ed6-c045-4daf-bc45-e6713ba0ccd8",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "signin.aws.amazon.com"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATYOQDPQQA",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-06T23:09:45Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-06T23:21:13Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "maxResults": 1000,
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "requestID": "b84f837c-0006-4d8f-9d04-c263e0818921",
+      "eventID": "919bfd78-0216-421c-bd08-7ed6e3136c2b",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATYOQDPQQA",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-06T23:09:45Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-06T23:21:13Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeSecurityGroups",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "maxResults": 1000,
+        "securityGroupSet": {},
+        "securityGroupIdSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "requestID": "04206b1c-ef83-4ba6-996c-3b4ca8ff2d4d",
+      "eventID": "8d86088c-f372-4d26-9592-d1bfecd3f87a",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATVL7TXD77",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-06T23:09:45Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-06T23:21:15Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "maxResults": 100,
+        "instancesSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "requestID": "4705e519-4cea-4aa3-ada8-b99a469c4a64",
+      "eventID": "29b3dea0-354a-466b-b272-7044723aef2d",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATVGDNTZEZ",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-06T23:09:45Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-06T23:21:43Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeSecurityGroups",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "maxResults": 1000,
+        "securityGroupSet": {},
+        "securityGroupIdSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "requestID": "8c67e170-09f6-4a5b-9078-13c70f68f546",
+      "eventID": "d463dfe7-831d-4392-8ce5-7a0c164a16af",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "ec2.us-east-1.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATY54YX3YR",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-06T23:09:45Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-06T23:32:06Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "maxItems": 1000
+      },
+      "responseElements": null,
+      "requestID": "43f652b8-4980-43c5-b923-934a1315a280",
+      "eventID": "010cea6c-444c-404d-a4b6-6dbfefbc9149",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATY54YX3YR",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-06T23:09:45Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-06T23:32:21Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "DetachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "userName": "lab-analyst-user",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null,
+      "requestID": "3616e032-8068-41c0-b005-38eeed257f20",
+      "eventID": "0b468866-a39e-48b9-99fc-569486247872",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:user/lab-analyst-user",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIARZDBHTAT4PW7J4PP",
+        "userName": "lab-analyst-user"
+      },
+      "eventTime": "2026-05-06T23:33:51Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "aws-cli/1.44.68 md/Botocore#1.42.78 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.13.13 md/pyimpl#CPython m/C,D,n,b,Z cfg/retry-mode#legacy botocore/1.42.78",
+      "errorCode": "AccessDenied",
+      "errorMessage": "User: arn:aws:iam::122610489383:user/lab-analyst-user is not authorized to perform: iam:ListUsers on resource: arn:aws:iam::122610489383:user/ because no identity-based policy allows the iam:ListUsers action",
+      "requestParameters": null,
+      "responseElements": null,
+      "requestID": "5aa27aff-d976-4824-83fc-98ae4e2d6bd3",
+      "eventID": "43b90586-c1c5-45e2-8051-b0038aa81d5c",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTATY54YX3YR",
+        "userName": "davidarpasi",
+        "sessionContext": {
+          "attributes": {
+            "creationDate": "2026-05-06T23:09:45Z",
+            "mfaAuthenticated": "true"
+          }
+        }
+      },
+      "eventTime": "2026-05-06T23:34:47Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "AttachUserPolicy",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": {
+        "userName": "lab-analyst-user",
+        "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+      },
+      "responseElements": null,
+      "requestID": "2d838152-e26b-4a98-b564-643387c1884a",
+      "eventID": "1e18c8d0-e812-45bb-bec7-ccb497db209c",
+      "readOnly": false,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      },
+      "sessionCredentialFromConsole": "true"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:user/lab-analyst-user",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIARZDBHTAT4PW7J4PP",
+        "userName": "lab-analyst-user"
+      },
+      "eventTime": "2026-05-06T23:43:16Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListRoles",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "aws-cli/1.44.68 md/Botocore#1.42.78 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.13.13 md/pyimpl#CPython m/C,b,Z,n,D cfg/retry-mode#legacy botocore/1.42.78",
+      "requestParameters": null,
+      "responseElements": null,
+      "requestID": "ec667d55-b25b-490b-b291-c12d1370e665",
+      "eventID": "0e268896-7201-436d-8bab-b9fc998ccb78",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:user/lab-analyst-user",
+        "accountId": "123456789012",
+        "accessKeyId": "AKIARZDBHTAT4PW7J4PP",
+        "userName": "lab-analyst-user"
+      },
+      "eventTime": "2026-05-06T23:43:01Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "ListUsers",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "aws-cli/1.44.68 md/Botocore#1.42.78 ua/2.1 os/windows#11 md/arch#amd64 lang/python#3.13.13 md/pyimpl#CPython m/n,b,C,Z,D cfg/retry-mode#legacy botocore/1.42.78",
+      "requestParameters": null,
+      "responseElements": null,
+      "requestID": "a6f6ef8a-efe0-467d-90e2-ea6a52503579",
+      "eventID": "7612b5ff-2207-4660-a327-3f92ff1b44d0",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "iam.amazonaws.com"
+      }
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:sts::123456789012:assumed-role/AWSServiceRoleForResourceExplorer/resource-explorer-2",
+        "accountId": "123456789012",
+        "accessKeyId": "ASIARZDBHTAT4PWDI2LJ",
+        "sessionContext": {
+          "sessionIssuer": {
+            "type": "Role",
+            "principalId": "AROARZDBHTAT3RXCSURQ3",
+            "arn": "arn:aws:iam::122610489383:role/aws-service-role/resource-explorer-2.amazonaws.com/AWSServiceRoleForResourceExplorer",
+            "accountId": "122610489383",
+            "userName": "AWSServiceRoleForResourceExplorer"
+          },
+          "attributes": {
+            "creationDate": "2026-05-07T14:41:15Z",
+            "mfaAuthenticated": "false"
+          }
+        },
+        "invokedBy": "resource-explorer-2.amazonaws.com"
+      },
+      "eventTime": "2026-05-07T14:41:15Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeSecurityGroups",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "resource-explorer-2.amazonaws.com",
+      "requestParameters": {
+        "maxResults": 1000,
+        "securityGroupSet": {},
+        "securityGroupIdSet": {},
+        "filterSet": {}
+      },
+      "responseElements": null,
+      "requestID": "daa51310-674e-45ca-a956-c1f477d084ff",
+      "eventID": "a1ea88e6-886d-4739-aefa-ae4757637dec",
+      "readOnly": true,
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management"
+    },
+    {
+      "eventVersion": "1.11",
+      "userIdentity": {
+        "type": "Root",
+        "principalId": "ANONYMIZED",
+        "arn": "arn:aws:iam::123456789012:root",
+        "accountId": "123456789012",
+        "accessKeyId": ""
+      },
+      "eventTime": "2026-05-07T22:15:41Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.42",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36",
+      "requestParameters": null,
+      "responseElements": {
+        "ConsoleLogin": "Success"
+      },
+      "additionalEventData": {
+        "LoginTo": "https://eu-north-1.console.aws.amazon.com/s3/buckets/cloudtrail-detection-lab-adavid?ca-oauth-flow-id=eb92&hashArgs=%23&isauthcode=true&oauthStart=1778192084076&prefix=AWSLogs%2F122610489383%2FCloudTrail%2Fus-east-1%2F2026%2F05%2F&region=eu-north-1&state=hashArgsFromTB_eu-north-1_1afcbfe83186401f",
+        "MobileVersion": "No",
+        "MFAIdentifier": "arn:aws:iam::122610489383:mfa/Exercise_AWS",
+        "MFAUsed": "Yes"
+      },
+      "eventID": "965a6031-314c-46ab-9cf5-994c83ff6372",
+      "readOnly": false,
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "recipientAccountId": "123456789012",
+      "eventCategory": "Management",
+      "tlsDetails": {
+        "tlsVersion": "TLSv1.3",
+        "cipherSuite": "TLS_AES_128_GCM_SHA256",
+        "clientProvidedHostHeader": "signin.aws.amazon.com"
+      }
+    }
+  ]
+}
