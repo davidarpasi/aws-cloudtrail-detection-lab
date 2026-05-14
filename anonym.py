@@ -1,5 +1,6 @@
 import json
 import glob
+import re
 
 files = glob.glob("logs/**/*.json", recursive=True)
 all_records = []
@@ -24,6 +25,10 @@ for r in filtered:
             r['userIdentity']['arn'] = r['userIdentity']['arn'].replace('122610489383', '123456789012')
         if 'principalId' in r['userIdentity']:
             r['userIdentity']['principalId'] = 'ANONYMIZED'
+        if 'accessKeyId' in r['userIdentity']:
+            r['userIdentity']['accessKeyId'] = 'ASIAXXXXXXXXXXXXXXXX'
+    if 'accessKeyId' in r:
+        r['accessKeyId'] = 'ASIAXXXXXXXXXXXXXXXX'
     if 'sourceIPAddress' in r:
         r['sourceIPAddress'] = '203.0.113.42'
     if 'recipientAccountId' in r:
