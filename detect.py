@@ -1,131 +1,166 @@
+"""Small CloudTrail detection rules and a local JSON command-line interface."""
+
+import argparse
+import gzip
 import json
-import glob
+import sys
 from collections import defaultdict
+from datetime import datetime, timedelta
+from pathlib import Path
 
-# === LOAD ALL LOGS ===
-files = glob.glob("logs/**/*.json", recursive=True)
-all_records = []
-for f in files:
-    data = json.load(open(f))
-    all_records.extend(data['Records'])
 
-print(f"Loaded {len(all_records)} events\n")
+def event_time(record):
+    value = record.get("eventTime")
+    if not isinstance(value, str):
+        raise ValueError("eventTime must be an ISO 8601 timestamp")
+    parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    if parsed.tzinfo is None:
+        raise ValueError("eventTime must include a timezone")
+    return parsed
 
-# === RULE 1: Console Login without MFA ===
+
+def actor(record):
+    identity = record.get("userIdentity") or {}
+    for field in ("arn", "principalId", "userName"):
+        if identity.get(field):
+            return str(identity[field])
+    return None
+
+
+def parameters(record, field="requestParameters"):
+    return record.get(field) or {}
+
+
+def finding(record, rule, **details):
+    return {"rule": rule, "actor": actor(record) or "unknown", "time": record["eventTime"], **details}
+
+
 def rule_console_login_no_mfa(records):
-    findings = []
-    for r in records:
-        if r['eventName'] == 'ConsoleLogin':
-            mfa = r.get('additionalEventData', {}).get('MFAUsed', 'No')
-            if mfa == 'No':
-                findings.append({
-                    'rule': 'ConsoleLogin without MFA',
-                    'user': r['userIdentity'].get('userName', 'N/A'),
-                    'time': r['eventTime'],
-                    'ip':   r.get('sourceIPAddress')
-                })
-    return findings
+    return [
+        finding(r, "ConsoleLogin without MFA", ip=r.get("sourceIPAddress"))
+        for r in records
+        if r["eventName"] == "ConsoleLogin"
+        and not r.get("errorCode")
+        and parameters(r, "responseElements").get("ConsoleLogin") == "Success"
+        and parameters(r, "additionalEventData").get("MFAUsed") == "No"
+    ]
 
-# === RULE 2: New IAM User Created ===
+
 def rule_iam_user_created(records):
-    findings = []
-    for r in records:
-        if r['eventName'] == 'CreateUser':
-            findings.append({
-                'rule': 'New IAM User Created',
-                'user': r['userIdentity'].get('userName', 'N/A'),
-                'time': r['eventTime'],
-                'new_user': r.get('requestParameters', {}).get('userName')
-            })
-    return findings
+    return [
+        finding(r, "New IAM User Created", new_user=parameters(r).get("userName"))
+        for r in records if r["eventName"] == "CreateUser" and not r.get("errorCode")
+    ]
 
-# === RULE 3: Admin Policy Attached ===
+
 def rule_admin_policy_attached(records):
-    findings = []
-    for r in records:
-        if r['eventName'] == 'AttachUserPolicy':
-            policy = r.get('requestParameters', {}).get('policyArn', '')
-            if 'AdministratorAccess' in policy:
-                findings.append({
-                    'rule': 'AdministratorAccess Policy Attached',
-                    'user': r['userIdentity'].get('userName', 'N/A'),
-                    'time': r['eventTime'],
-                    'target_user': r.get('requestParameters', {}).get('userName')
-                })
-    return findings
+    return [
+        finding(r, "AdministratorAccess Policy Attached", target_user=parameters(r).get("userName"))
+        for r in records
+        if r["eventName"] == "AttachUserPolicy" and not r.get("errorCode")
+        and parameters(r).get("policyArn") == "arn:aws:iam::aws:policy/AdministratorAccess"
+    ]
 
-# === RULE 4: Access Key Created ===
+
 def rule_access_key_created(records):
-    findings = []
-    for r in records:
-        if r['eventName'] == 'CreateAccessKey':
-            findings.append({
-                'rule': 'Access Key Created',
-                'user': r['userIdentity'].get('userName', 'N/A'),
-                'time': r['eventTime'],
-                'target_user': r.get('requestParameters', {}).get('userName')
-            })
-    return findings
+    return [
+        finding(r, "Access Key Created", target_user=parameters(r).get("userName"))
+        for r in records if r["eventName"] == "CreateAccessKey" and not r.get("errorCode")
+    ]
 
-# === RULE 5: Access Denied Spike (3+ in same session) ===
-def rule_access_denied_spike(records):
-    denied = defaultdict(list)
-    for r in records:
-        if r.get('errorCode') in ('AccessDenied', 'Client.UnauthorizedOperation'):
-            user = r['userIdentity'].get('userName', 'N/A')
-            denied[user].append(r['eventTime'])
-    findings = []
-    for user, times in denied.items():
-        if len(times) >= 2:
-            findings.append({
-                'rule': 'Access Denied Spike',
-                'user': user,
-                'count': len(times),
-                'times': times
-            })
-    return findings
 
-# === RULE 6: Reconnaissance Pattern (3+ Describe/List in 5 min) ===
-def rule_recon_pattern(records):
-    from datetime import datetime, timezone
-    recon_events = ['DescribeInstances', 'DescribeSecurityGroups',
-                    'ListUsers', 'ListRoles', 'GetCallerIdentity']
-    user_events = defaultdict(list)
-    for r in records:
-        if r['eventName'] in recon_events:
-            user = r['userIdentity'].get('userName', 'N/A')
-            t = datetime.fromisoformat(r['eventTime'].replace('Z', '+00:00'))
-            user_events[user].append(t)
-
+def window_findings(records, rule, threshold=3, seconds=300):
+    grouped = defaultdict(list)
+    for record in records:
+        identity = actor(record)
+        if identity is not None:
+            grouped[identity].append(record)
     findings = []
-    for user, times in user_events.items():
-        times.sort()
-        for i in range(len(times)):
-            window = [t for t in times if (t - times[i]).total_seconds() <= 300]
-            if len(window) >= 3:
+    for identity, events in sorted(grouped.items()):
+        events.sort(key=event_time)
+        left = 0
+        for right, record in enumerate(events):
+            while event_time(record) - event_time(events[left]) > timedelta(seconds=seconds):
+                left += 1
+            if right - left + 1 >= threshold:
                 findings.append({
-                    'rule': 'Reconnaissance Pattern Detected',
-                    'user': user,
-                    'count': len(window),
-                    'window': '5 minutes'
+                    "rule": rule, "actor": identity, "count": right - left + 1,
+                    "window_seconds": seconds, "start": events[left]["eventTime"],
+                    "end": record["eventTime"],
                 })
                 break
     return findings
 
-# === RUN ALL RULES ===
-rules = [
-    rule_console_login_no_mfa,
-    rule_iam_user_created,
-    rule_admin_policy_attached,
-    rule_access_key_created,
-    rule_access_denied_spike,
-    rule_recon_pattern,
-]
 
-for rule in rules:
-    findings = rule(all_records)
-    if findings:
-        print(f"ALERT: {findings[0]['rule']} — {len(findings)} finding(s)")
-        for f in findings:
-            print(f"   {f}")
-        print()
+def rule_access_denied_spike(records):
+    denied = [r for r in records if r.get("errorCode") in (
+        "AccessDenied", "AccessDeniedException", "Client.UnauthorizedOperation",
+    )]
+    return window_findings(denied, "Access Denied Spike")
+
+
+def rule_recon_pattern(records):
+    names = {"DescribeInstances", "DescribeSecurityGroups", "ListUsers", "ListRoles", "GetCallerIdentity"}
+    return window_findings([r for r in records if r["eventName"] in names], "Reconnaissance Pattern")
+
+
+RULES = (
+    rule_console_login_no_mfa, rule_iam_user_created, rule_admin_policy_attached,
+    rule_access_key_created, rule_access_denied_spike, rule_recon_pattern,
+)
+
+
+def load_records(source):
+    source = Path(source)
+    files = sorted(p for p in source.rglob("*") if p.is_file() and (
+        p.name.endswith(".json") or p.name.endswith(".json.gz")
+    )) if source.is_dir() else [source]
+    if not files:
+        raise ValueError("No JSON or JSON.GZ files found")
+    records = []
+    seen = set()
+    for path in files:
+        opener = gzip.open if path.name.endswith(".gz") else open
+        with opener(path, "rt", encoding="utf-8") as handle:
+            document = json.load(handle)
+        if not isinstance(document, dict) or not isinstance(document.get("Records"), list):
+            raise ValueError("Expected a CloudTrail object containing a Records array")
+        for record in document["Records"]:
+            if not isinstance(record, dict) or not isinstance(record.get("eventName"), str):
+                raise ValueError("Each record must contain an eventName string")
+            event_time(record)
+            for field in ("userIdentity", "requestParameters", "responseElements", "additionalEventData"):
+                if record.get(field) is not None and not isinstance(record[field], dict):
+                    raise ValueError(f"{field} must be an object or null")
+            marker = json.dumps(record, sort_keys=True)
+            if marker not in seen:
+                seen.add(marker)
+                records.append(record)
+    if not records:
+        raise ValueError("No events found")
+    return records
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("input", nargs="?", default="sample_events.json", help="CloudTrail JSON file or directory")
+    parser.add_argument("--json", action="store_true", help="Print a JSON report")
+    args = parser.parse_args(argv)
+    try:
+        records = load_records(args.input)
+    except (OSError, ValueError, EOFError):
+        print("Could not read events. Check the path, JSON structure and timestamp fields.", file=sys.stderr)
+        return 2
+    findings = [item for rule in RULES for item in rule(records)]
+    if args.json:
+        print(json.dumps({"events": len(records), "findings": findings}, indent=2))
+    else:
+        print(f"Loaded {len(records)} events")
+        for item in findings:
+            print(json.dumps(item, sort_keys=True))
+        print(f"Findings: {len(findings)}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

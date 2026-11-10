@@ -1,0 +1,45 @@
+{
+  "events": 12,
+  "findings": [
+    {
+      "rule": "ConsoleLogin without MFA",
+      "actor": "arn:aws:iam::123456789012:user/example-operator",
+      "time": "2026-01-01T00:00:00Z",
+      "ip": "203.0.113.42"
+    },
+    {
+      "rule": "New IAM User Created",
+      "actor": "arn:aws:iam::123456789012:user/example-operator",
+      "time": "2026-01-01T00:01:00Z",
+      "new_user": "example-lab-user"
+    },
+    {
+      "rule": "AdministratorAccess Policy Attached",
+      "actor": "arn:aws:iam::123456789012:user/example-operator",
+      "time": "2026-01-01T00:02:00Z",
+      "target_user": "example-lab-user"
+    },
+    {
+      "rule": "Access Key Created",
+      "actor": "arn:aws:iam::123456789012:user/example-operator",
+      "time": "2026-01-01T00:03:00Z",
+      "target_user": "example-lab-user"
+    },
+    {
+      "rule": "Access Denied Spike",
+      "actor": "arn:aws:iam::123456789012:user/example-operator",
+      "count": 3,
+      "window_seconds": 300,
+      "start": "2026-01-01T00:10:00Z",
+      "end": "2026-01-01T00:12:00Z"
+    },
+    {
+      "rule": "Reconnaissance Pattern",
+      "actor": "arn:aws:iam::123456789012:user/example-operator",
+      "count": 3,
+      "window_seconds": 300,
+      "start": "2026-01-01T00:20:00Z",
+      "end": "2026-01-01T00:25:00Z"
+    }
+  ]
+}

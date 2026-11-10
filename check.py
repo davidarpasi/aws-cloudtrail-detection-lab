@@ -1,30 +1,23 @@
-import json
-import glob
+"""List event names and counts without printing identities or event payloads."""
 
-files = glob.glob("logs/**/*.json", recursive=True)
-all_records = []
+import argparse
+from collections import Counter
 
-for f in files:
-    data = json.load(open(f))
-    all_records.extend(data['Records'])
+from detect import load_records
 
-print(f"Total events found: {len(all_records)}")
-print()
 
-# Érdekes eventek szűrése
-interesting = [
-    "CreateUser", "DeleteUser",
-    "CreateAccessKey", "DeleteAccessKey",
-    "AttachUserPolicy", "DetachUserPolicy",
-    "ConsoleLogin",
-    "DescribeInstances", "DescribeSecurityGroups",
-    "GetCallerIdentity",
-    "ListUsers", "ListRoles",
-]
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("input", nargs="?", default="sample_events.json")
+    args = parser.parse_args()
+    try:
+        records = load_records(args.input)
+    except (OSError, ValueError, EOFError):
+        parser.exit(2, "Could not read CloudTrail events.\n")
+    print(f"Total events: {len(records)}")
+    for name, count in sorted(Counter(r["eventName"] for r in records).items()):
+        print(f"{name}: {count}")
 
-print("=== INTERESTING EVENTS ===")
-for record in all_records:
-    if record['eventName'] in interesting:
-        user = record['userIdentity'].get('userName', 'N/A')
-        error = record.get('errorCode', '')
-        print(f"{record['eventName']} | {user} | {record['eventTime']} | {error}")
+
+if __name__ == "__main__":
+    main()
